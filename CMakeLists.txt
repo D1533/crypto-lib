@@ -13,6 +13,8 @@ src/hash/sha1.cpp
 src/hash/sha256.cpp
 src/hash/sha512.cpp
 src/hash/sha384.cpp
+src/aes/aes.cpp
+src/aes/ecb.cpp
 )
 
 target_include_directories(crypto PUBLIC
@@ -26,6 +28,7 @@ target_include_directories(crypto PUBLIC
 add_executable(tests
     tests/tests_main.cpp
     tests/hash/tests_hash.cpp
+    tests/aes/tests_aes.cpp
 )
 
 target_link_libraries(tests PRIVATE crypto)
