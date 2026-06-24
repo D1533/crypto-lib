@@ -9,7 +9,7 @@ with a focus on understanding the underlying mathematical and algorithmic founda
 
 ## Current implementations
 
-Hash: MD5, SHA1, SHA256, SHA384, SHA256.
+Hash: MD5, SHA1, SHA256, SHA384, SHA256.  
 AES: ECB, CBC.
 
 
