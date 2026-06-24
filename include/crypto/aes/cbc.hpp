@@ -9,9 +9,9 @@
 
 namespace crypto::cipher{
 
-class AES_ECB {
+class AES_CBC {
 public:
-    AES_ECB(const std::vector<uint8_t> &key);
+    AES_CBC(const std::vector<uint8_t> &key, const std::array<uint8_t, 16> &iv);
 
     std::vector<uint8_t> pkcs7_pad(const std::vector<uint8_t>& plaintext);
     std::vector<uint8_t> pkcs7_unpad(const std::vector<uint8_t>& plaintext);
@@ -19,8 +19,10 @@ public:
     std::vector<uint8_t> encrypt(const std::vector<uint8_t>& plaintext);
     std::vector<uint8_t> decrypt(const std::vector<uint8_t>& ciphertext);
 
+
 private:
     AES aes;
+    std::array<uint8_t, 16> iv;
 };
 
 }

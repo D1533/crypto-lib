@@ -15,6 +15,7 @@ src/hash/sha512.cpp
 src/hash/sha384.cpp
 src/aes/aes.cpp
 src/aes/ecb.cpp
+src/aes/cbc.cpp
 )
 
 target_include_directories(crypto PUBLIC

@@ -41,7 +41,7 @@ constexpr uint8_t INV_SBOX[256] = {
     0x17, 0x2B, 0x04, 0x7E, 0xBA, 0x77, 0xD6, 0x26, 0xE1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0C, 0x7D
 };
 
-AES::AES(const std::array<uint8_t, 16>& key) : key_size(KeySize::AES128), rounds(10){
+AES::AES(const std::vector<uint8_t>& key) : key_size(KeySize::AES128), rounds(10){
     key_expansion(key);
 }
 
@@ -79,7 +79,7 @@ std::array<uint8_t, AES::BlockSize> AES::decrypt_block(const std::array<uint8_t,
     return state;
 }
 
-void AES::key_expansion(const std::array<uint8_t, 16>& key){
+void AES::key_expansion(const std::vector<uint8_t>& key){
     
     std::array<uint8_t,176> expanded; 
 
