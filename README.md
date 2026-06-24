@@ -15,6 +15,7 @@ AES: ECB, CBC
 
 ## Project Structure
 
+```bash
 crypto-lib/
 ├── build
 ├── include
@@ -49,6 +50,6 @@ crypto-lib/
     │   └── tests_hash.cpp
     ├── tests_main.cpp
     └── test_utils.hpp
-
+```
 
 
